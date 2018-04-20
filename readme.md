@@ -6,6 +6,6 @@
 - [使用Heketi作为kubernetes的持久存储GlusterFS的external provisioner](using-heketi-gluster-for-persistent-storage.md)
 - [Ceph](ceph.md)
   - [用Helm托管安装Ceph集群并提供后端存储-中文翻译](Ceph-helm/ceph-helm-install-guide-zh.md)
-  - [用Helm托管安装Ceph集群并提供后端存储-英文原版](Ceph-helm/ceph-helm-install-guide.md)
+  - [用Helm托管安装Ceph集群并提供后端存储-英文原版](Ceph-helm/ceph-helm-install-guide-en.md)
 - [NFS](nfs.md)
   - [利用NFS动态提供Kubernetes后端存储卷](using-nfs-for-persistent-storage.md)
