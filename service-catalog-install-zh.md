@@ -1,3 +1,5 @@
+本文翻译自[官方项目文档](https://github.com/kubernetes-incubator/service-catalog/blob/master/docs/install.md)。与[官方网站文档](https://kubernetes.io/docs/tasks/service-catalog/install-service-catalog-using-helm/)大致一致。
+
 Kubernetes 1.7或更高版本的集群运行 API Aggregator，它位于core API Server前面的专用proxy服务器。
 
 服务目录(Service Catalog)提供了一个位于API aggregator后面的API服务器，因此可以用kubectl像平常一样与Service Catalog进行交互。
@@ -103,7 +105,7 @@ AUTHORIZATION_MODE=Node,RBAC hack/local-up-cluster.sh -O
 ### 云提供商
 许多云提供商为你启用了RBAC的新集群。有关详细信息，请查阅你的提供商的文档。
 
-# 第2步 - 安装服务目录
+# 第2步 - 安装Service Catalog
 集群和Helm配置正确，安装Service Catalog很简单：
 
 ```bash
@@ -141,7 +143,7 @@ $env:PATH += ";${pwd}\bin"
 svcat version --client
 ```
 
-## 手册
+## 手动下载
 1. 对应操作系统下载相应的二进制文件：
   * macOS: https://download.svcat.sh/cli/latest/darwin/amd64/svcat
   * Windows: https://download.svcat.sh/cli/latest/windows/amd64/svcat.exe
