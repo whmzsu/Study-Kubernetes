@@ -9,3 +9,5 @@
   - [用Helm托管安装Ceph集群并提供后端存储-英文原版](Ceph-helm/ceph-helm-install-guide-en.md)
 - [NFS](nfs.md)
   - [利用NFS动态提供Kubernetes后端存储卷](using-nfs-for-persistent-storage.md)
+- [Service Catalog](service-catalog.md)
+  - [Service Catalog 安装与交互](service-catalog-install-zh.md)
