@@ -1,0 +1,27 @@
+# github pages
+
+Gitbook 的资料文档使用的是 Digital Ocean 的主机，而 DO 家的很多地址被墙了，导致往往无法访问。因此我在思考除了将书籍发布到 GitBook.io 以外，能不能部署到其他地方？这时我找到了一个渠道——将书籍发布到 GitHub Pages。
+
+由于 gitbook 书籍可以通过 gitbook 本地构建出 site 格式，所以可以直接将构建好的书籍直接放到 GitHub Pages 中托管，之后，便可以通过如下地址访问书籍：
+
+<username>.github.io/<project>
+
+经过我的摸索，流程上只需要两步即可：生成网站与一键部署。
+
+构建书籍内容
+首先，使用 gitbook build 将书籍内容输出到默认目录，也就是当前目录下的 _book 目录。
+
+gitbook build
+1
+将 书籍部署到 gh-pages 分支
+这个步骤我使用了 gh-pages 这个工具，它可以将文件夹一键发布到 GitHub 项目下的 gh-pages 分支中（其他分支也可以发布，但是在本文下用到的就是 gh-pages 这个分支）。
+
+首先先安装 gh-pages 工具
+
+npm install g gh-pages
+1
+然后输入以下指令
+
+gh-pages -d _book
+1
+然后 _book 下的所有文档都会部署到 gh-pages 分支。大功告成。
