@@ -30,6 +30,26 @@ $ sudo tar -C stable-chroot -c . |sudo  docker import - debian-stable
 ## RedHat Enterprise Linux
 If you have subscription to the redhat product, the easiest way is downloading from  https://access.redhat.com/containers/#/explore, and choose the suitable version.
 
+or build it by yourself
+
+Build Procedure
+
+1)download binary mkimage-yum.sh from https://github.com/docker/docker/blob/master/contrib/mkimage-yum.sh or git clone https://github.com/docker/docker.git
+
+2)modify the mkimage-yum.sh to create a rhel 7 minimal tarfile, comment out the following two lines and add the third line as follows:
+
+#tar –numeric-owner -c -C “$target” . | docker import - $name:$version
+
+#docker run -i -t $name:$version echo success
+
+tar –numeric-owner -c -C “$target” . -zf ${name}.tar.gz
+
+3)use command “./mkimage-yum.sh rhel7_docker” to create the rhel7_docker.tar.gz tarfile.
+
+4) copy the tarfile to another host where a docker daemon is running.
+
+5) use command “cat rhel7_docker.tar.gz | sudo docker import - richxsl/rhel7” to create a docker rhel7 minimal image. You should change the variable YOUR_NAME and the YOUR_NAME is also your docker hub registration name.
+
 
 ## CentOS
 
